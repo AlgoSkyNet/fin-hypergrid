@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Mixin: groupedHeader</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-cellEditors.html">cellEditors</a></li><li><a href="module-cellRenderers.html">cellRenderers</a></li><li><a href="module-defaults.html">defaults</a></li><li><a href="module-effects.html">effects</a></li><li><a href="module-localization.html">localization</a></li></ul><h3>Classes</h3><ul><li><a href="AggregationsView.html">AggregationsView</a></li><li><a href="Behavior.html">Behavior</a></li><li><a href="behaviors.JSON.html">JSON</a></li><li><a href="behaviors.Local.html">Local</a></li><li><a href="Button.html">Button</a></li><li><a href="CellClick.html">CellClick</a></li><li><a href="CellEditing.html">CellEditing</a></li><li><a href="CellEditor.html">CellEditor</a></li><li><a href="CellRenderer.html">CellRenderer</a></li><li><a href="CellSelection.html">CellSelection</a></li><li><a href="Color.html">Color</a></li><li><a href="Column.html">Column</a></li><li><a href="ColumnAutosizing.html">ColumnAutosizing</a></li><li><a href="ColumnMoving.html">ColumnMoving</a></li><li><a href="ColumnPicker.html">ColumnPicker</a></li><li><a href="ColumnResizing.html">ColumnResizing</a></li><li><a href="ColumnSchemaFactory.html">ColumnSchemaFactory</a></li><li><a href="ColumnSelection.html">ColumnSelection</a></li><li><a href="ColumnSorting.html">ColumnSorting</a></li><li><a href="Combo.html">Combo</a></li><li><a href="ComboBox.html">ComboBox</a></li><li><a href="DataModel.html">DataModel</a></li><li><a href="dataModels.JSON.html">JSON</a></li><li><a href="Date.html">Date</a></li><li><a href="Default.html">Default</a></li><li><a href="DefaultFilter.html">DefaultFilter</a></li><li><a href="Dialog.html">Dialog</a></li><li><a href="ErrorCell.html">ErrorCell</a></li><li><a href="Feature.html">Feature</a></li><li><a href="FilterBox.html">FilterBox</a></li><li><a href="Filters.html">Filters</a></li><li><a href="groupedHeader.mixInTo-GroupedHeader.html">GroupedHeader</a></li><li><a href="GroupView.html">GroupView</a></li><li><a href="Hypergrid.html">Hypergrid</a></li><li><a href="InMemory.html">InMemory</a></li><li><a href="KeyPaging.html">KeyPaging</a></li><li><a href="LastSelection.html">LastSelection</a></li><li><a href="ManageFilters.html">ManageFilters</a></li><li><a href="module-cellEditors-CellEditors.html">CellEditors</a></li><li><a href="module-cellRenderers-CellRenderers.html">CellRenderers</a></li><li><a href="module-localization-DateFormatter.html">DateFormatter</a></li><li><a href="module-localization-Formatter.html">Formatter</a></li><li><a href="module-localization-Localization.html">Localization</a></li><li><a href="module-localization-NumberFormatter.html">NumberFormatter</a></li><li><a href="Null.html">Null</a></li><li><a href="Number.html">Number</a></li><li><a href="OnHover.html">OnHover</a></li><li><a href="ParserCQL.html">ParserCQL</a></li><li><a href="Renderer.html">Renderer</a></li><li><a href="RowResizing.html">RowResizing</a></li><li><a href="RowSelection.html">RowSelection</a></li><li><a href="SelectionModel.html">SelectionModel</a></li><li><a href="SimpleCell.html">SimpleCell</a></li><li><a href="Slider.html">Slider</a></li><li><a href="SparkBar.html">SparkBar</a></li><li><a href="SparkLine.html">SparkLine</a></li><li><a href="Spinner.html">Spinner</a></li><li><a href="Textfield.html">Textfield</a></li><li><a href="ThumbwheelScrolling.html">ThumbwheelScrolling</a></li><li><a href="TreeCell.html">TreeCell</a></li><li><a href="TreeView.html">TreeView</a></li></ul><h3>Mixins</h3><ul><li><a href="drillDown.html">drillDown</a></li><li><a href="groupedHeader.html">groupedHeader</a></li><li><a href="rowById.html">rowById</a></li></ul><h3>Interfaces</h3><ul><li><a href="localizerInterface.html">localizerInterface</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addDeepProperties">addDeepProperties</a></li><li><a href="global.html#append">append</a></li><li><a href="global.html#cancelEditing">cancelEditing</a></li><li><a href="global.html#clearAllCellProperties">clearAllCellProperties</a></li><li><a href="global.html#close">close</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#copyAll">copyAll</a></li><li><a href="global.html#deprecated">deprecated</a></li><li><a href="global.html#errorEffectEnd">errorEffectEnd</a></li><li><a href="global.html#getActiveColumnIndex">getActiveColumnIndex</a></li><li><a href="global.html#getColumnFilter">getColumnFilter</a></li><li><a href="global.html#hideEditor">hideEditor</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="global.html#isAggregationsview">isAggregationsview</a></li><li><a href="global.html#isGroupview">isGroupview</a></li><li><a href="global.html#modes">modes</a></li><li><a href="global.html#onClick">onClick</a></li><li><a href="global.html#open">open</a></li><li><a href="global.html#paint">paint</a></li><li><a href="global.html#saveFolder">saveFolder</a></li><li><a href="global.html#saveFolders">saveFolders</a></li><li><a href="global.html#setColumnFilterState">setColumnFilterState</a></li><li><a href="global.html#tokenizeLiterals">tokenizeLiterals</a></li><li><a href="global.html#truncatePipeline">truncatePipeline</a></li><li><a href="global.html#validateEditorValue">validateEditorValue</a></li></ul>
+</nav>
+<div id="main">
+
+    <h1 class="page-title">Mixin: groupedHeader</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        groupedHeader
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>Group headers are implemented by rendering each header with it's group(s) above it, all in the one header cell. This multi-line header has the highest-order group's label on the top, with each lower-order group's label on successive lines below it, ending with the actual column header. The conceit of this algorithm is that each group level is rendered in successive columns stretched across all the columns thus far rendered.</p>
+<p>Column grouping is specified by resetting the all headers involved to a list consisting of the labels of the common group header(s) and ending with the actual column header. For example, to strecth a group label &quot;Age&quot; above columns 4 and 5:</p>
+<pre class="prettyprint source lang-javascript"><code>grid.behavior.getActiveColumn[3].header = &quot;Age|Years&quot;;
+grid.behavior.getActiveColumn[4].header = &quot;Age|Months&quot;;</code></pre><p>It is usually convenient to use the behavior's <code>setHeaders</code> method. This mix-in actually extends that method to make it slightly more useful: In addition to setting the headers as usual, it also increases the header row height to accommodate the deepest group label. (You don't have to use this method; you can simply reset the headers as above and set the row height yourself.)</p>
+<h3>API access</h3><p>If you're using browserify with the <em>npm</em> module:</p>
+<pre class="prettyprint source lang-javascript"><code>var groupedHeader = require('fin-hypergrid/add-ons/grouped-header');</code></pre><p>If you're using the script file on the CDN:</p>
+<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;openfin.github.io/fin-hypergrid/build/fin-hypergrid.min.js&quot;>&lt;/script>
+&lt;script src=&quot;openfin.github.io/fin-hypergrid/build/add-ons/grouped-header.min.js&quot;>&lt;/script></code></pre><pre class="prettyprint source lang-javascript"><code>var groupedHeader = fin.hypergrid.groupedHeader;</code></pre><h3>Usage</h3><p> This example specifies that the two named columns are under a group labeled &quot;Name&quot;:</p>
+<pre class="prettyprint source lang-javascript"><code>var grid = new fin.Hypergrid(...);
+groupedHeader.mixInTo(grid, options);
+grid.behavior.setHeaders({
+    firstName: 'Name|First',
+    lastName: 'Name|Last'
+});</code></pre><p>You can nest headers to any level. The example above is only one level deep. The live <a href="http://openfin.github.io/fin-hypergrid/grouped-header.html">demo</a> demonstrates a nested header (one additional level).</p>
+<p>This API uses its own extension of the <a href="SimpleCell.html"><code>SimpleCell</code></a> cell renderer which does the stretched partial cell renders explained above. It also calls a background paint function to fill the area behind the group labels. This API comes with two such background paint functions, described below. These are both exposed so you can specify one over the other. You can also specify a reference to a custom function.</p>
+<h3>Background paint functions</h3><h4><a href="groupedHeader.html#.drawProportionalBottomBorder"><code>drawProportionalBottomBorder</code></a></h4><p>This is the default background paint function. It paints a bottom border under the group header whose thickness is in proportion to the order (level) of the group:</p>
+<p><img src="https://github.com/openfin/fin-hypergrid/raw/master/images/jsdoc/grouped-header/bottom-border.png" alt="Bottom Border Background"></p>
+<p>The lowest-order group has a 1-pixel thick border; borders grow progressively thicker with each superior group; the highest-order group has the thickest border.</p>
+<h4><a href="groupedHeader.html#.drawLinearGradient"><code>drawLinearGradient</code></a></h4><p>This paints a background that transitions color from top to bottom:</p>
+<p><img src="https://github.com/openfin/fin-hypergrid/raw/master/images/jsdoc/grouped-header/gradient.png" alt="Linear Gradient Background"></p>
+<h3>Options</h3><p>Options are supplied to the <a href="groupedHeader.html#.mixInTo"><code>mixInTo</code></a> call and apply to the entire grid so that all column groups in a grid share the same appearance. Most options (with the exception of <code>delimiter</code>) are for the use of the <a href="groupedHeader.mixInTo-GroupedHeader.html"><code>GroupedHeader</code></a> cell renderer.</p>
+<h4><code>paintBackground</code> option</h4><p>To override the default background paint function, pass a reference in the <code>backgroundPaint</code> option:</p>
+<pre class="prettyprint source lang-javascript"><code>fin.Hypergrid.groupedHeader.mixInTo(grid, {
+   paintBackground: groupedHeader.drawLinearGradient
+});</code></pre><h4><code>gradientStops</code> option</h4><p>Gradients blend between a series of colors filling the area behind the group label from top to bottom. Each color may include an opacity level.</p>
+<p>The gradient illustrated above is the default. It uses the default header label color to fill the background, transitioning from top alpha=0% to bottom alpha=35%.</p>
+<p>You can however specify your own <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient/addColorStop">gradient stops</a>:</p>
+<pre class="prettyprint source lang-javascript"><code>fin.Hypergrid.groupedHeader.mixInTo(grid, {
+   paintBackground: fin.Hypergrid.groupedHeader.drawLinearGradient,
+   gradientStops: [
+       [0, 'rgba(255, 255, 0, 0)'],
+       [1, 'rgba(255, 255, 0, .5)']
+   ],
+   groupColor: 'red'
+});</code></pre><p>The gradient shown above fills the background, transitioning from top (0) in yellow (<code>255, 255, 0</code>) with alpha=0% (<code>0</code>) to bottom (<code>1</code>) with alpha=50% (<code>.5</code>):</p>
+<p><img src="https://github.com/openfin/fin-hypergrid/raw/master/images/jsdoc/grouped-header/gradient-yellow.png" alt="Linear Gradient Background (Yellow)"></p>
+<h4><code>groupColor</code> option</h4><p>The example above also illustrates setting the <code>groupColor</code> option which specifies the font color for the group labels, in this case red (yuck! but it's just an example).</p>
+<h4><code>delimiter</code> option</h4><p>Allows you to change the delimiter in the header strings from the default vertical bar character (<code>'|'</code>) to something else.</p></div>
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".drawLinearGradient"><span class="type-signature">(static) </span>drawLinearGradient<span class="signature">(gc)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary"><p>Draw vertical gradient behind group label.</p></p>
+    
+
+
+
+<div class="description">
+    <p>Supply a reference to this function in the <code>paintBackground</code> option in your <a href="groupedHeader.html#.mixInTo"><code>groupedHeader.mixInTo</code></a> call. This function is not called directly.</p>
+</div>
+
+
+
+
+
+
+
+    <h5>This:</h5>
+    <ul><li>{GroupHeader}</li></ul>
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>gc</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#CanvasRenderingContext2D">CanvasRenderingContext2D</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".drawProportionalBottomBorder"><span class="type-signature">(static) </span>drawProportionalBottomBorder<span class="signature">(gc)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary"><p>Draw underscore under group label.</p></p>
+    
+
+
+
+<div class="description">
+    <p>Supply a reference to this function in the <code>paintBackground</code> option in your <a href="groupedHeader.html#.mixInTo"><code>groupedHeader.mixInTo</code></a> call. This function is not called directly.</p>
+</div>
+
+
+
+
+
+
+
+    <h5>This:</h5>
+    <ul><li>{GroupHeader}</li></ul>
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>gc</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#CanvasRenderingContext2D">CanvasRenderingContext2D</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".mixInTo"><span class="type-signature">(static) </span>mixInTo<span class="signature">(grid, options)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary"><p>Mix in the code necessary to support grouped column headers.</p></p>
+    
+
+
+
+<div class="description">
+    <p>Performs the following mix ins:</p>
+<ol>
+<li>Creates a new renderer and adds it to the grid.</li>
+<li>Sets the data model's <code>groupHeaderDelimiter</code> property, which tells the data model to prepend the up and down sort arrows to the actual column header part of the header string rather than the start of the header string (which is the highest-order group label).</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>grid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Hypergrid.html">Hypergrid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Your instantiated grid object.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Overrides for the <a href="groupedHeader.mixInTo-GroupedHeader.html"><code>GroupedHeader</code></a> cell renderer's <em>own</em> members.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".paintHeaderGroups"><span class="type-signature">(static) </span>paintHeaderGroups<span class="signature">(gc, config)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+    <h5>This:</h5>
+    <ul><li>{GroupHeader}</li></ul>
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>gc</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#CanvasRenderingContext2D">CanvasRenderingContext2D</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>config</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".setHeaders"><span class="type-signature">(static) </span>setHeaders<span class="signature">(headers)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary"><p>Set the headers <em>and</em> set the header row height.</p></p>
+    
+
+
+
+<div class="description">
+    <p>Convenience function to:</p>
+<ol>
+<li>Call the underlying <code>setHeaders</code> method.</li>
+<li>Set the header row height based on the maximum group depth.</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+    <h5>This:</h5>
+    <ul><li>{<a href="Behavior.html">Behavior</a>}</li></ul>
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>headers</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+|
+
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The header labels. One of:</p>
+<ul>
+<li><em>If an array:</em> Must contain all headers in column order.</li>
+<li><em>If a hash:</em> May contain any headers, keyed by field name, in any order.</li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    © 2016 <a href="http://www.openfin.co" target="_blank">OpenFin</a> All Rights Reserved.
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

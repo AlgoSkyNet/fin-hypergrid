@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: TreeView</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-cellEditors.html">cellEditors</a></li><li><a href="module-cellRenderers.html">cellRenderers</a></li><li><a href="module-defaults.html">defaults</a></li><li><a href="module-effects.html">effects</a></li><li><a href="module-localization.html">localization</a></li></ul><h3>Classes</h3><ul><li><a href="AggregationsView.html">AggregationsView</a></li><li><a href="Behavior.html">Behavior</a></li><li><a href="behaviors.JSON.html">JSON</a></li><li><a href="behaviors.Local.html">Local</a></li><li><a href="Button.html">Button</a></li><li><a href="CellClick.html">CellClick</a></li><li><a href="CellEditing.html">CellEditing</a></li><li><a href="CellEditor.html">CellEditor</a></li><li><a href="CellRenderer.html">CellRenderer</a></li><li><a href="CellSelection.html">CellSelection</a></li><li><a href="Color.html">Color</a></li><li><a href="Column.html">Column</a></li><li><a href="ColumnAutosizing.html">ColumnAutosizing</a></li><li><a href="ColumnMoving.html">ColumnMoving</a></li><li><a href="ColumnPicker.html">ColumnPicker</a></li><li><a href="ColumnResizing.html">ColumnResizing</a></li><li><a href="ColumnSchemaFactory.html">ColumnSchemaFactory</a></li><li><a href="ColumnSelection.html">ColumnSelection</a></li><li><a href="ColumnSorting.html">ColumnSorting</a></li><li><a href="Combo.html">Combo</a></li><li><a href="ComboBox.html">ComboBox</a></li><li><a href="DataModel.html">DataModel</a></li><li><a href="dataModels.JSON.html">JSON</a></li><li><a href="Date.html">Date</a></li><li><a href="Default.html">Default</a></li><li><a href="DefaultFilter.html">DefaultFilter</a></li><li><a href="Dialog.html">Dialog</a></li><li><a href="ErrorCell.html">ErrorCell</a></li><li><a href="Feature.html">Feature</a></li><li><a href="FilterBox.html">FilterBox</a></li><li><a href="Filters.html">Filters</a></li><li><a href="groupedHeader.mixInTo-GroupedHeader.html">GroupedHeader</a></li><li><a href="GroupView.html">GroupView</a></li><li><a href="Hypergrid.html">Hypergrid</a></li><li><a href="InMemory.html">InMemory</a></li><li><a href="KeyPaging.html">KeyPaging</a></li><li><a href="LastSelection.html">LastSelection</a></li><li><a href="ManageFilters.html">ManageFilters</a></li><li><a href="module-cellEditors-CellEditors.html">CellEditors</a></li><li><a href="module-cellRenderers-CellRenderers.html">CellRenderers</a></li><li><a href="module-localization-DateFormatter.html">DateFormatter</a></li><li><a href="module-localization-Formatter.html">Formatter</a></li><li><a href="module-localization-Localization.html">Localization</a></li><li><a href="module-localization-NumberFormatter.html">NumberFormatter</a></li><li><a href="Null.html">Null</a></li><li><a href="Number.html">Number</a></li><li><a href="OnHover.html">OnHover</a></li><li><a href="ParserCQL.html">ParserCQL</a></li><li><a href="Renderer.html">Renderer</a></li><li><a href="RowResizing.html">RowResizing</a></li><li><a href="RowSelection.html">RowSelection</a></li><li><a href="SelectionModel.html">SelectionModel</a></li><li><a href="SimpleCell.html">SimpleCell</a></li><li><a href="Slider.html">Slider</a></li><li><a href="SparkBar.html">SparkBar</a></li><li><a href="SparkLine.html">SparkLine</a></li><li><a href="Spinner.html">Spinner</a></li><li><a href="Textfield.html">Textfield</a></li><li><a href="ThumbwheelScrolling.html">ThumbwheelScrolling</a></li><li><a href="TreeCell.html">TreeCell</a></li><li><a href="TreeView.html">TreeView</a></li></ul><h3>Mixins</h3><ul><li><a href="drillDown.html">drillDown</a></li><li><a href="groupedHeader.html">groupedHeader</a></li><li><a href="rowById.html">rowById</a></li></ul><h3>Interfaces</h3><ul><li><a href="localizerInterface.html">localizerInterface</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addDeepProperties">addDeepProperties</a></li><li><a href="global.html#append">append</a></li><li><a href="global.html#cancelEditing">cancelEditing</a></li><li><a href="global.html#clearAllCellProperties">clearAllCellProperties</a></li><li><a href="global.html#close">close</a></li><li><a href="global.html#copy">copy</a></li><li><a href="global.html#copyAll">copyAll</a></li><li><a href="global.html#deprecated">deprecated</a></li><li><a href="global.html#errorEffectEnd">errorEffectEnd</a></li><li><a href="global.html#getActiveColumnIndex">getActiveColumnIndex</a></li><li><a href="global.html#getColumnFilter">getColumnFilter</a></li><li><a href="global.html#hideEditor">hideEditor</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="global.html#isAggregationsview">isAggregationsview</a></li><li><a href="global.html#isGroupview">isGroupview</a></li><li><a href="global.html#modes">modes</a></li><li><a href="global.html#onClick">onClick</a></li><li><a href="global.html#open">open</a></li><li><a href="global.html#paint">paint</a></li><li><a href="global.html#saveFolder">saveFolder</a></li><li><a href="global.html#saveFolders">saveFolders</a></li><li><a href="global.html#setColumnFilterState">setColumnFilterState</a></li><li><a href="global.html#tokenizeLiterals">tokenizeLiterals</a></li><li><a href="global.html#truncatePipeline">truncatePipeline</a></li><li><a href="global.html#validateEditorValue">validateEditorValue</a></li></ul>
+</nav>
+<div id="main">
+
+    <h1 class="page-title">Class: TreeView</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        TreeView
+        </h2>
+        
+            <div class="class-description"><p>This is a simple helper class to set up the tree-view data source in the context of a hypergrid.</p>
+<p>It includes methods to:</p>
+<ul>
+<li>Insert the tree-view data source (<code>DataSourceTreeview</code>) into the data model's pipeline (see {#@link TreeView#setPipeline|setPipeline} method) along with the optional filter and sort data sources.</li>
+<li>Perform the self-join and rebuild the index to turn the tree-view on or off, optionally hiding the ID columns ({#@link TreeView#setRelation|setRelation} method).</li>
+</ul></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="TreeView"><span class="type-signature"></span>new TreeView<span class="signature">(options)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Passed to data source's <code>setRelation</code> method (<a href="http://openfin.github.io/hyper-analytics/DataSourceTreeview.html#setRelation">see</a>) when called here by local API's <a href="TreeView.html#setRelation"><code>this.setRelation</code></a> method.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="setPipeline"><span class="type-signature"></span>setPipeline<span class="signature">(options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary"><p>Reconfigure the data model's data pipeline for tree view.</p></p>
+    
+
+
+
+<div class="description">
+    <p>The <em>data transformation pipeline</em> is an ordered list of data transformations, always beginning with an actual data source. Each <em>transformation</em> in the pipeline operates on the data source immediately ahead of it. While transformations are free to completely rewrite the data in any way they want, most transformations merely apply an index to the data.</p>
+<p>The <em>shared pipeline</em> is defined on the data model's prototype and is used for all grid instances (using the same data model). A grid can however define a <em>local pipeline</em> on the data model's instance.</p>
+<p>In any case, the actual data pipeline is (re)constructed from a <em>pipeline configuration</em> each time data is set on the grid via <code>setData</code>.</p>
+<p>This method reconfigures the data pipeline suitable for tree view. It is designed to operate on either of:</p>
+<ul>
+<li>the &quot;shared&quot; pipeline configuration (on the grid's data model's prototype)</li>
+<li>the grid's &quot;local&quot; pipeline configuration (on the grid's data model's instance)</li>
+</ul>
+<p>This method operates as follows:</p>
+<ol>
+<li>Reset the pipeline:<ul>
+<li>In the case of the shared pipeline, the array is truncated in place.</li>
+<li>In the case of an instance pipeline, a new array is created.</li>
+</ul>
+</li>
+<li>Add the first data source:<ul>
+<li>The data source provided in <code>options.firstPipe</code> is used if given; otherwise...</li>
+<li>The existing pipeline configuration's first data source will be reused. (First time in, this will always come from the prototype's version.)</li>
+</ul>
+</li>
+<li>Add the filter data source (if requested).</li>
+<li>Add the tree sorter data source (if requested).</li>
+<li>Finally, add the tree view data source.</li>
+</ol>
+<p>Step 1 above operates on the shared pipeline when you supply the data model's prototype in <code>options.dataModelPrototype</code> (see below). In this case, you have the option of calling this method <em>before</em> instantiating your grid(s):</p>
+<pre class="prettyprint source lang-javascript"><code>var JSON = Hypergrid.dataModels.JSON.prototype;
+var pipelineOptions = { dataModelPrototype: JSON.prototype }
+TreeView.prototype.setPipeline(pipelineOptions);</code></pre><p>This approach avoids the need to reset the data after reconfiguring the pipeline (in which case, do <em>not</em> call this method again after instantiation).</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>includeFilter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>Enables filtering. Includes the filter data source. The filter row is hidden if falsy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>includeSorter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>Enables sorting. Includes the specialized tree sorter data source.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dataModelPrototype</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Adds requested pipes to the &quot;shared&quot; pipeline array object instead of to a new custom (instance) pipeline array object.</p>
+<p>Supply this option when you want to set up the &quot;shared&quot; pipeline on the data model prototype, which would then be available to all grid instances subsequently created thereafter. In this case, you can call this method before or after grid instantiation. To call it before, call it directly on <code>TreeView.prototype</code>; to call it after, call it normally (on the <code>TreeView</code> instance).</p>
+<p>If omitted, a new &quot;own&quot; (instance) pipeline is created, overriding the prototype's (shared) pipeline. (In this case this method must be called normally, on the <code>Treeview</code> instance.)</p>
+<p>In either case, if called &quot;normally&quot; (on the instance), the data is reset via <code>setData</code>. (If called on the prototype it is not reset here. Currently the <code>Hypergrid</code> constructor calls it.)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>firstPipe</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#dataSourcePipelineObject">dataSourcePipelineObject</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Use as first data source in the new pipeline. If undefined, the existing pipeline's first data source will be reused.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setRelation"><span class="type-signature"></span>setRelation<span class="signature">(join, hideIdColumns<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+
+    
+    <p class="summary"><p>Build/unbuild the tree view.</p></p>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>If truthy, turn tree-view <strong>ON</strong>. If falsy (or omitted), turn it <strong>OFF</strong>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>hideIdColumns</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>Once hidden, cannot be unhidden from here.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Joined state.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    © 2016 <a href="http://www.openfin.co" target="_blank">OpenFin</a> All Rights Reserved.
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
